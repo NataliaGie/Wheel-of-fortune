@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.wrapper h5 {
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.wheel-container {
+    margin: 0 auto;
+    transform: scale(0.95);
+}
+
+.wheel-paragraph {
+    font-size: 23px;
+    inline-size: 570px;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    color: rgb(70, 70, 70);
+}
+
+@media (max-width: 630px) {
+    .wheel-container {
+        transform: scale(0.8);
+    }
+
+    .wheel-paragraph {
+        inline-size: 80%;
+    }
+}
+
+@media (max-width: 570px) {
+    .wheel-container {
+        transform: scale(0.65);
+        margin: -50px 0 0 -5px;
+        position: static;
+        left: 5px;
+    }
+}
+
+.wheelparts-container {
+    margin: 0 auto 25px;
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 8px solid gainsboro;
+    position: relative;
+    overflow: hidden;
+    transition: 4s;
+}
+
+.wheelparts-container div {
+    height: 51%;
+    width: 210px;
+    position: absolute;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+    left: 135px;
+    padding-bottom: 60px;
+}
+
+.wheelparts-container .part-one {
+    background-color: #e20000;
+	left: 49%;
+}
+
+.wheelparts-container .part-two {
+    background-color: #ffda33;
+	transform: rotate(45deg);
+}
+
+.wheelparts-container .part-three {
+    background-color: #e20000;
+	transform:rotate(90deg);
+}
+
+.wheelparts-container .part-four {
+    background-color: #8351d3;
+	transform: rotate(135deg);
+}
+
+.wheelparts-container .part-five {
+    background-color: #006696;
+	transform: rotate(180deg);
+}
+
+.wheelparts-container .part-six {
+    background-color: #47a056;
+	transform: rotate(225deg);
+}
+
+.wheelparts-container .part-seven {
+    background-color: #e20000;
+	transform: rotate(270deg);
+}
+
+.wheelparts-container .part-eight {
+    background-color: #ffa734;
+	transform: rotate(315deg);
+}
+
+#spin-button {
+    position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	background-color: #e2e2e2;
+	text-transform: uppercase;
+	border: 8px solid #fff;
+	font-weight: bold;
+	font-size: 20px;
+	color:#808080;
+	width: 110px;
+	height: 110px;
+	font-family: sans-serif;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+	letter-spacing: 1px;
+    box-shadow: 0px 0px 10px grey;
+    transition: all 0.5s ease;
+}
+
+#spin-button:active,
+#spin-button:hover {
+    color: black;
+    border: 8px solid rgb(150, 252, 140);
+    background-color: white;
+}
+
+.pointer {
+    position: absolute;
+    z-index: 13;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 30px 0 30px;
+    border-color: #001225 transparent transparent transparent;
+    top: -3px;
+    left: 43%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
