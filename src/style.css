@@ -5,16 +5,16 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .wrapper {
     width: 90vw;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,4 +175,38 @@ body {
     left: 43%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+}
+
+.modal__disable {
+    display: none;
+}
+
+.modal__open {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-window {
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 15vh auto 0;
+    text-align: right;
+}
+
+.close-button {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 720px) {
+    .modal-window {
+        width: 85%;
+        height: 400px;
+    }
 }
