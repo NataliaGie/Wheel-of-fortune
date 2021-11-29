@@ -5,7 +5,7 @@ const wheelContainer = document.querySelector(".wheelparts-container");
 const spinButton = document.getElementById("spin-button");
 const modal = document.getElementById("modal");
 const modalWindow = document.querySelector(".modal-window");
-const closeModalButton = document.querySelector(".close-button");
+const closeModalSign = document.querySelector(".cross-sign");
 
 const degreesOfRotate = ['655', '675', '1020', '1050', '1400', '1410', '1405', '1750', '1755'];
 let randomDegrees = degreesOfRotate[Math.floor(Math.random() * degreesOfRotate.length)];
@@ -32,4 +32,5 @@ function openModal () {
 
 wheelContainer.addEventListener('transitionend', openModal);
 wheelContainer.addEventListener('transitionend', function (e) { party.confetti(this) } );
-modal.addEventListener('click', closeModal);
+closeModalSign.addEventListener('click', closeModal);
+
