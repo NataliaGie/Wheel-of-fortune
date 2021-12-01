@@ -79,7 +79,7 @@ body {
     border: 8px solid gainsboro;
     position: relative;
     overflow: hidden;
-    transition: 4s;
+    transition: 5s;
 }
 
 .wheelparts-container div {
